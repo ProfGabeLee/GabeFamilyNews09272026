@@ -500,7 +500,74 @@
         }
 
         /* ==========================================
-           7. GOOGLE DRIVE BANNER
+           7. PAST WEEKS ARCHIVE SECTION
+           ========================================== */
+        .past-weeks-section {
+            margin-bottom: 40px;
+        }
+
+        .past-weeks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+
+        .week-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 24px;
+            text-decoration: none;
+            color: var(--text-main);
+            box-shadow: var(--shadow);
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .week-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+            box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.08);
+        }
+
+        .week-badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+            background: var(--accent-soft);
+            padding: 3px 10px;
+            border-radius: 12px;
+            align-self: flex-start;
+        }
+
+        .week-card h3 {
+            font-size: 1.15rem;
+            color: var(--primary);
+        }
+
+        .week-card .card-action {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-top: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .week-card:hover .card-action {
+            color: var(--accent-hover);
+            text-decoration: underline;
+        }
+
+        /* ==========================================
+           8. GOOGLE DRIVE BANNER
            ========================================== */
         .drive-banner {
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
@@ -593,6 +660,7 @@
                 <li><a href="#bible-verse">Bible</a></li>
                 <li><a href="#interesting-things">Interesting Things</a></li>
                 <li><a href="#family-news">Family News</a></li>
+                <li><a href="#past-weeks">Past Weeks</a></li>
                 <li><a href="https://drive.google.com/drive/folders/1upg11lUnkvY4rhiNhHlm5BI7fytfxQUR" target="_blank" class="nav-drive-btn">Google Drive 📁</a></li>
             </ul>
         </div>
@@ -784,7 +852,32 @@
             </div>
         </section>
 
-        <!-- 7. GOOGLE DRIVE HYPERLINK BANNER -->
+        <!-- 7. PAST WEEKS ARCHIVE -->
+        <section id="past-weeks" class="past-weeks-section">
+            <h2 class="section-title">Past Weeks</h2>
+
+            <div class="past-weeks-grid">
+                <a href="week1.html" class="week-card" target="_blank">
+                    <span class="week-badge">Week #1</span>
+                    <h3>September Week #1</h3>
+                    <span class="card-action">View Webpage &rarr;</span>
+                </a>
+
+                <a href="https://profgabelee.github.io/GabeFamilyNews09132026" class="week-card" target="_blank">
+                    <span class="week-badge">Week #2</span>
+                    <h3>September Week #2</h3>
+                    <span class="card-action">View Webpage &rarr;</span>
+                </a>
+
+                <a href="https://profgabelee.github.io/GabeFamilyNews09202026" class="week-card" target="_blank">
+                    <span class="week-badge">Week #3</span>
+                    <h3>September Week #3</h3>
+                    <span class="card-action">View Webpage &rarr;</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- 8. GOOGLE DRIVE HYPERLINK BANNER -->
         <div id="google-drive" class="drive-banner">
             <h3>Want to see all photo albums & videos?</h3>
             <p>I uploaded high-resolution videos and full photo albums from this week to our shared Google Drive folder.</p>
